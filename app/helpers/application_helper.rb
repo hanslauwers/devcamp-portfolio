@@ -15,4 +15,8 @@ module ApplicationHelper
       content_tag(:p, source_greeting, class: "source_greeting")
     end
   end
+
+  def set_copyright
+    LauwersCopyrightTool::Renderer.copyright 'Hans Lauwers', 'All rights reserved'
+  end
 end
