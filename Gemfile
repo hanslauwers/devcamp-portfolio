@@ -59,4 +59,4 @@ gem 'devise', '~> 4.4', '>= 4.4.3'
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 
-gem 'lauwers_copyright_tool', git: 'https://github.com/hanslauwers/lauwers_copyright_tool'
+gem 'lauwers_copyright_tool', '~> 0.1.0'
