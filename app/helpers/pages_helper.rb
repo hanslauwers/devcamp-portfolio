@@ -1,7 +1,5 @@
 module PagesHelper
   def twitter_parser tweet
-    tweet = "delmethomas: I’m back at a slightly damp and moody @tbtlake to see that Toby Vaughan in #Rails - but even damp and moody it’s st… https://t.co/cIvmFBJXyn"
-
     regex = %r{
               \b
               (

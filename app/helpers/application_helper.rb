@@ -37,7 +37,10 @@ module ApplicationHelper
       },{
         url: blogs_path,
         title: "Blogs"
-      },
+      },{
+        url: tech_news_path,
+        title: "Tech News"
+      }
     ]
   end
 
