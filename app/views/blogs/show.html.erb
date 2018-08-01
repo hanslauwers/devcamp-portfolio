@@ -2,10 +2,26 @@
   <h2 class="pb-3 mb-4 font-italic border-bottom">
     <%= @blog.title %>
   </h2>
-  <%= link_to 'Edit', edit_blog_path(@blog)  if logged_in?(:site_admin) %>
 
+  <nav aria-label="breadcrumb">
+    <div class="breadcrumb">
+        <%= link_to "Home", root_path, class: "breadcrumb-item" %>
+      </span>
+      <%= link_to @blog.topic.title, topic_show_path(@blog.topic.id), class: "breadcrumb-item" %>
+      <span class="breadcrumb-item active" aria-current="page">
+        <%= @blog.title %>
+      </span>
+      <span class="edit-blog-icon">
+        <%= link_to fa_icon('pencil-square-o'), edit_blog_path(@blog)   if logged_in?(:site_admin)%>
+        <%= link_to fa_icon('trash'), @blog, method: :delete, data: { confirm: 'Are you sure want to delete this post?'}   if logged_in?(:site_admin)%>
+      </span>
+    </div>
+  </nav>
   <p>
-    <%= @blog.body %>
+    <%= @blog.topic.title %>
+  </p>
+  <p>
+    <%= markdown(@blog.body) %>
   </p>
 
   <%= render 'comments/comment_form' %>

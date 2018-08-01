@@ -6,6 +6,10 @@
   --jumbotron-padding-y: 3rem;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Condensed';
+}
+
 .jumbotron {
   padding-top: var(--jumbotron-padding-y);
   padding-bottom: var(--jumbotron-padding-y);
@@ -49,4 +53,8 @@ footer p {
 
 .portfolio-container {
   padding-top: 30px;
+}
+
+.thumb-image-portfolio {
+  width: 100%;
 }

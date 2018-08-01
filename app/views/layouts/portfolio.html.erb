@@ -10,6 +10,10 @@
 
     <meta name="keywords" content="<%= @seo_keywords %>" />
 
+    <%= favicon_link_tag 'favicons/favicon.ico' %>
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    
     <%= stylesheet_link_tag    'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -24,8 +28,6 @@
     <%= render 'shared/portfolio_footer' %>
 
     <%= alerts %>
-
-    <%= source_helper("application") %>
     
   </body>
 </html>

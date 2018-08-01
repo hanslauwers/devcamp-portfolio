@@ -16,6 +16,9 @@ Rails.application.routes.draw do
     end
   end
 
+  get 'topic/:id', to: 'topics#show', as: 'topic_show'
+  get 'topics', to: 'topics#index'
+
   mount ActionCable.server => '/cable'
 
   root to: 'pages#home'
